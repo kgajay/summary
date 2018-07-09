@@ -7,6 +7,7 @@ import (
 	"logger"
 	"config"
 	"server"
+	"dao"
 )
 
 func main() {
@@ -20,5 +21,7 @@ func main() {
 
 	logger.Init(*env)
 	config.Init(*env)
+	dao.Init()
 	server.Init(*env)
 }
+

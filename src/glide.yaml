@@ -9,3 +9,7 @@ import:
   - plivolog
 - package: github.com/spf13/viper
   version: ^1.0.2
+- package: github.com/jinzhu/gorm
+  version: ^1.9.1
+  subpackages:
+    - dialects/postgres

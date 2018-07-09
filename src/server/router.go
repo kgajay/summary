@@ -13,6 +13,7 @@ func NewRouter() *echo.Echo {
 	// Middleware
 	router.Use(middleware.Logger())
 	router.Use(middleware.Recover())
+	router.Use(middleware.RequestID())
 
 	// Endpoints for healthcheck
 	router.GET("/status", controllers.GetStatus)

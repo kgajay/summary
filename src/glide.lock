@@ -1,5 +1,5 @@
-hash: 2941433381335dbb4b1db9632fb1a497a650067ebfb68e2e1bbfa88378fe50d3
-updated: 2018-07-03T15:09:52.968719521+05:30
+hash: d0028acb87822f8393790e7e90c3faf350dcfb79b2ff609d798704d683493433
+updated: 2018-07-09T12:47:37.386702705+05:30
 imports:
 - name: github.com/dgrijalva/jwt-go
   version: 06ea1031745cb8b3dab3f6a236daf2b0aa468b7e
@@ -17,6 +17,12 @@ imports:
   - json/parser
   - json/scanner
   - json/token
+- name: github.com/jinzhu/gorm
+  version: 6ed508ec6a4ecb3531899a69cbc746ccf65a4166
+  subpackages:
+  - dialects/postgres
+- name: github.com/jinzhu/inflection
+  version: 04140366298a54a039076d798123ffa108fff46c
 - name: github.com/labstack/echo
   version: 6d227dfea4d2e52cb76856120b3c17f758139b4e
   subpackages:
@@ -28,6 +34,11 @@ imports:
   - color
   - log
   - random
+- name: github.com/lib/pq
+  version: 90697d60dd844d5ef6ff15135d0203f65d2f53b8
+  subpackages:
+  - hstore
+  - oid
 - name: github.com/magiconair/properties
   version: c2353362d570a7bfa228149c62842019201cfb71
 - name: github.com/mattn/go-colorable

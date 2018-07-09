@@ -24,3 +24,11 @@ server:
     - banana
   nestedList4:
     - 67
+db:
+  host: "localhost"
+  name: "goorm_test"
+  password: "plivopassword"
+  user: "plivocfg"
+  port: "5432"
+  dialect: "postgres"
+  sslMode: "disable"

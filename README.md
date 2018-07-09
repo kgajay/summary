@@ -25,3 +25,10 @@ Learning:
   - ES basic ops (create, search, filter)
   - Docker deployment
   
+Learning:
+  - https://tour.golang.org
+  - https://golang.org/doc/
+  - https://godoc.org/github.com/spf13/viper
+  - https://gowebexamples.com/
+  - https://echo.labstack.com/guide
+  - http://gorm.io/docs/

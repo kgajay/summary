@@ -15,13 +15,23 @@ var config *AppConfig
 
 // Create private data struct to hold config options.
 type ServerInfo struct {
-	Host string
-	Host_2 string
-	Port string
+	Host        string
+	Host_2      string
+	Port        string
 	NestedList1 []int8
 	NestedList2 []float32
-	NestedList3	[]string
+	NestedList3 []string
 	NestedList4 []float32
+}
+
+type Database struct {
+	Host     string
+	Name     string
+	Password string
+	User     string
+	Port     string
+	Dialect  string
+	SslMode  string
 }
 
 type AppConfig struct {
@@ -29,8 +39,9 @@ type AppConfig struct {
 	Hacker  bool       `yaml:"hacker"`
 	Name    string     `yaml:"name"`
 	Hobbies []string   `yaml:"hobbies"`
-	Nums	[]int8     `yaml:"nums"`
-	Server  ServerInfo `yaml:server`
+	Nums    []int8     `yaml:"nums"`
+	Server  ServerInfo `yaml:"server"`
+	Db      Database   `yaml:"db"`
 }
 
 // Init is an exported method that takes the environment, starts the viper (external lib),
@@ -49,17 +60,16 @@ func Init(env string) {
 		log.Fatal("Error on parsing configuration file. Error: " + err.Error())
 	}
 	conf := &AppConfig{}
-	err  = v.Unmarshal(conf)
+	err = v.Unmarshal(conf)
 
 	if err != nil {
 		// log.Fatal("unable to decode into config struct, Error: " + err.Error())
 		panic(err.Error())
 	}
 
-
 	config = conf
 	cfgJson, err := json.Marshal(config)
-	logger.Log.Infof("env: %s, config: %s", env, cfgJson)
+	logger.Log.Debugf("env: %s, config: %s", env, cfgJson)
 
 }
 
