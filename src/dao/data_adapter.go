@@ -42,5 +42,9 @@ func connectToDB(user, password, host, port, dbName, dbType, sslMode string) (db
 	if err != nil {
 		return nil, err
 	}
+	// Disable table name's pluralization
+	db.SingularTable(true)
+	// Enable Logger, show detailed log
+	db.LogMode(true)
 	return db, nil
 }

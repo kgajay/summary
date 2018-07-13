@@ -8,6 +8,7 @@ import (
 	"config"
 	"server"
 	"dao"
+	"model"
 )
 
 func main() {
@@ -22,6 +23,6 @@ func main() {
 	logger.Init(*env)
 	config.Init(*env)
 	dao.Init()
+	model.Migrate()
 	server.Init(*env)
 }
-

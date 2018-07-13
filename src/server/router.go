@@ -19,5 +19,10 @@ func NewRouter() *echo.Echo {
 	router.GET("/status", controllers.GetStatus)
 	router.GET("/deepstatus", controllers.GetDeepStatus)
 
+	// RestAPI for User
+	router.GET("/user/:id", controllers.GetUser)
+	router.GET("/user/show", controllers.ShowUser)
+	router.POST("/user", controllers.SaveUser)
+
 	return router
 }

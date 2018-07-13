@@ -12,4 +12,9 @@ import:
 - package: github.com/jinzhu/gorm
   version: ^1.9.1
   subpackages:
-    - dialects/postgres
+  - dialects/postgres
+- package: github.com/nu7hatch/gouuid
+- package: gopkg.in/go-playground/validator.v9
+  version: ^9.20.2
+- package: github.com/asaskevich/govalidator
+  version: ^9.0.0

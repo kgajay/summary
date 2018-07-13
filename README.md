@@ -32,3 +32,26 @@ Learning:
   - https://gowebexamples.com/
   - https://echo.labstack.com/guide
   - http://gorm.io/docs/
+  - https://gopkg.in/go-playground/validator.v9
+  - https://github.com/asaskevich/govalidator
+  
+CRUD API's:
+  - ```javascript
+    curl -X GET http://localhost:8090/user/1 
+    ```
+  - ```javascript
+    curl -X POST \
+      http://localhost:8090/user \
+      -H 'content-type: application/json' \
+      -d '{
+    	"name": "Tom",
+    	"team": "Sales",
+    	"member": "RT",
+    	"x": [1, 2, 3],
+    	"y": {
+    		"a": {"b": 1},
+    		"c": [3, 4, 5]
+    	}
+    }'
+    ``` 
+     
