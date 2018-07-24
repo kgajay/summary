@@ -32,3 +32,7 @@ db:
   port: "5432"
   dialect: "postgres"
   sslMode: "disable"
+
+elasticsearch:
+  host: "http://localhost:9200"
+  bulkUpdateLimit: 20000

@@ -34,14 +34,20 @@ type Database struct {
 	SslMode  string
 }
 
+type ElasticSearch struct {
+	Host            string
+	BulkUpdateLimit int
+}
+
 type AppConfig struct {
-	Age     int8       `yaml:"age"`
-	Hacker  bool       `yaml:"hacker"`
-	Name    string     `yaml:"name"`
-	Hobbies []string   `yaml:"hobbies"`
-	Nums    []int8     `yaml:"nums"`
-	Server  ServerInfo `yaml:"server"`
-	Db      Database   `yaml:"db"`
+	Age           int8          `yaml:"age"`
+	Hacker        bool          `yaml:"hacker"`
+	Name          string        `yaml:"name"`
+	Hobbies       []string      `yaml:"hobbies"`
+	Nums          []int8        `yaml:"nums"`
+	Server        ServerInfo    `yaml:"server"`
+	Db            Database      `yaml:"db"`
+	ElasticSearch ElasticSearch `yaml:"elasticsearch"`
 }
 
 // Init is an exported method that takes the environment, starts the viper (external lib),

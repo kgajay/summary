@@ -34,9 +34,10 @@ Learning:
   - http://gorm.io/docs/
   - https://gopkg.in/go-playground/validator.v9
   - https://github.com/asaskevich/govalidator
+  - https://github.com/olivere/elastic
   
 CRUD API's:
-  - ```javascript
+  - ```java
     curl -X GET http://localhost:8090/user/1 
     ```
   - ```java

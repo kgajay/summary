@@ -9,6 +9,7 @@ import (
 	"server"
 	"dao"
 	"model"
+	"es"
 )
 
 func main() {
@@ -24,5 +25,6 @@ func main() {
 	config.Init(*env)
 	dao.Init()
 	model.Migrate()
+	es.Init()
 	server.Init(*env)
 }

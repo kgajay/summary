@@ -5,6 +5,7 @@ import (
 	"github.com/labstack/echo"
 	"time"
 	"dao"
+	"es"
 )
 
 var startTime time.Time
@@ -31,6 +32,11 @@ func GetDeepStatus(c echo.Context) (err error) {
 		resp["db"] = map[string]interface{}{
 			"status": "up",
 		}
+	}
+	esRes, esStatus := es.GetESStatus()
+	resp["es"] = map[string]interface{}{
+		"status": esRes,
+		"code":  esStatus,
 	}
 	return c.JSON(http.StatusOK, resp)
 }

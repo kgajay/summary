@@ -24,5 +24,8 @@ func NewRouter() *echo.Echo {
 	router.GET("/user/show", controllers.ShowUser)
 	router.POST("/user", controllers.SaveUser)
 
+	// GET ES indices
+	router.GET("/es/indices", controllers.EsIndices)
+
 	return router
 }
