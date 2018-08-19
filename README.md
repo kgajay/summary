@@ -35,6 +35,7 @@ Learning:
   - https://gopkg.in/go-playground/validator.v9
   - https://github.com/asaskevich/govalidator
   - https://github.com/olivere/elastic
+  - https://github.com/Masterminds/glide
   
 CRUD API's:
   - ```java

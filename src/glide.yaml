@@ -5,6 +5,8 @@ import:
   subpackages:
   - middleware
 - package: github.com/plivo/go-plivolog
+  repo: git@github.com:plivo/go-plivolog.git
+  vcs: git
   subpackages:
   - plivolog
 - package: github.com/spf13/viper
