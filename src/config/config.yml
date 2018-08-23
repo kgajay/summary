@@ -36,3 +36,11 @@ db:
 elasticsearch:
   host: "http://docker.for.mac.localhost:9200"
   bulkUpdateLimit: 20000
+
+auth:
+  user:
+    - pswd1
+    - pswd2
+  admin:
+    - admin1
+    - admin2

@@ -40,14 +40,15 @@ type ElasticSearch struct {
 }
 
 type AppConfig struct {
-	Age           int8          `yaml:"age"`
-	Hacker        bool          `yaml:"hacker"`
-	Name          string        `yaml:"name"`
-	Hobbies       []string      `yaml:"hobbies"`
-	Nums          []int8        `yaml:"nums"`
-	Server        ServerInfo    `yaml:"server"`
-	Db            Database      `yaml:"db"`
-	ElasticSearch ElasticSearch `yaml:"elasticsearch"`
+	Age           int8                `yaml:"age"`
+	Hacker        bool                `yaml:"hacker"`
+	Name          string              `yaml:"name"`
+	Hobbies       []string            `yaml:"hobbies"`
+	Nums          []int8              `yaml:"nums"`
+	Server        ServerInfo          `yaml:"server"`
+	Db            Database            `yaml:"db"`
+	ElasticSearch ElasticSearch       `yaml:"elasticsearch"`
+	Auth          map[string][]string `yaml:"auth"`
 }
 
 // Init is an exported method that takes the environment, starts the viper (external lib),
