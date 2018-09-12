@@ -55,3 +55,9 @@ CRUD API's:
         }
       }'
     ```
+
+    
+Unit Tests:
+  - Go to tests dir and run ```go test -v```
+  - Or ```go test -v tests/```
+  - ``go test -cover ./$(go list ./... | grep -v vendor | grep -v benchmarking| grep -v src)/...``

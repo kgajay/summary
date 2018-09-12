@@ -5,7 +5,6 @@ import (
 	"github.com/labstack/echo"
 	"time"
 	"dao"
-	"es"
 )
 
 var startTime time.Time
@@ -33,11 +32,11 @@ func GetDeepStatus(c echo.Context) (err error) {
 			"status": "up",
 		}
 	}
-	esRes, esStatus := es.GetESStatus()
-	resp["es"] = map[string]interface{}{
-		"status": esRes,
-		"code":  esStatus,
-	}
+	//esRes, esStatus := es.GetESStatus()
+	//resp["es"] = map[string]interface{}{
+	//	"status": esRes,
+	//	"code":  esStatus,
+	//}
 	return c.JSON(http.StatusOK, resp)
 }
 
@@ -47,4 +46,8 @@ func init() {
 
 func uptime() string {
 	return time.Since(startTime).String()
+}
+
+func Sum(x int, y int) int {
+	return x + y
 }

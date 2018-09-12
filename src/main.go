@@ -23,7 +23,8 @@ func main() {
 
 	logger.Init(*env)
 	config.Init(*env)
-	dao.Init()
+	dao.Init(*env)
+	defer dao.GetDb().Close()
 	model.Migrate()
 	es.Init()
 	server.Init(*env)

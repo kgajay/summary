@@ -59,7 +59,12 @@ func Init(env string) {
 	v.SetConfigType("yaml")
 	v.SetEnvKeyReplacer(strings.NewReplacer(".", "_"))
 	v.AutomaticEnv()
-	v.AddConfigPath("src/config/")
+
+	if env == "test" {
+		v.AddConfigPath(".")
+	} else {
+		v.AddConfigPath("src/config/")
+	}
 	v.SetConfigName("config")
 
 	err = v.MergeInConfig() // Find and read the config file

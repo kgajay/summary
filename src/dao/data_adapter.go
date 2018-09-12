@@ -2,6 +2,7 @@ package dao
 
 import (
 	_ "github.com/jinzhu/gorm/dialects/postgres"
+	_ "github.com/jinzhu/gorm/dialects/sqlite"
 	"github.com/jinzhu/gorm"
 	"logger"
 	"fmt"
@@ -12,15 +13,22 @@ var (
 	testdb *gorm.DB
 )
 
-func Init() {
+func Init(env string) {
 	var err error
 	conf := config.GetConfig()
 
-	// Connect to Postgres database
-	testdb, err = connectToDB(conf.Db.User, conf.Db.Password, conf.Db.Host, conf.Db.Port,
-		conf.Db.Name, conf.Db.Dialect, conf.Db.SslMode)
-	if err != nil {
-		logger.Log.Fatal("Connection to Database failed with error: " + err.Error())
+	if env == "test" {
+		testdb, err = gorm.Open("sqlite3", "test.db")
+		if err != nil {
+			panic("failed to connect database")
+		}
+	} else {
+		// Connect to Postgres database
+		testdb, err = connectToDB(conf.Db.User, conf.Db.Password, conf.Db.Host, conf.Db.Port,
+			conf.Db.Name, conf.Db.Dialect, conf.Db.SslMode)
+		if err != nil {
+			logger.Log.Fatal("Connection to Database failed with error: " + err.Error())
+		}
 	}
 
 }

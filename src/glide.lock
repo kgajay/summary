@@ -1,5 +1,5 @@
-hash: f24a4d2d335e068a455a5ffccf204f5e4a3d2b11806b0f5103b067626595673c
-updated: 2018-08-19T00:42:19.914811046+05:30
+hash: 02aa3793a3590986defa8193a5179a9f4dd3576fb5cfa3220f6c0e98f6f19655
+updated: 2018-09-12T19:02:02.330407676+05:30
 imports:
 - name: github.com/asaskevich/govalidator
   version: ccb8e960c48f04d6935e72476ae4a51028f9e22f
@@ -23,6 +23,7 @@ imports:
   version: 6ed508ec6a4ecb3531899a69cbc746ccf65a4166
   subpackages:
   - dialects/postgres
+  - dialects/sqlite
 - name: github.com/jinzhu/inflection
   version: 04140366298a54a039076d798123ffa108fff46c
 - name: github.com/labstack/echo
@@ -53,12 +54,14 @@ imports:
   version: efa589957cd060542a26d2dd7832fd6a6c6c3ade
 - name: github.com/mattn/go-isatty
   version: 6ca4dbf54d38eea1a992b3c722a76a5d1c4cb25c
+- name: github.com/mattn/go-sqlite3
+  version: 25ecb14adfc7543176f7d85291ec7dba82c6f7e4
 - name: github.com/mitchellh/mapstructure
   version: bb74f1db0675b241733089d5a1faa5dd8b0ef57b
 - name: github.com/nu7hatch/gouuid
   version: 179d4d0c4d8d407a32af483c2354df1d2c91e6c3
 - name: github.com/olivere/elastic
-  version: ba73507263a03681330a4003be0327681a15a1c7
+  version: e6cae211ee802eab70248a68fe2cb03b616744c9
   subpackages:
   - config
   - uritemplates
@@ -87,7 +90,11 @@ imports:
 - name: github.com/spf13/pflag
   version: 3ebe029320b2676d667ae88da602a5f854788a8a
 - name: github.com/spf13/viper
-  version: 907c19d40d9a6c9bb55f040ff4ae45271a4754b9
+  version: 8fb642006536c8d3760c99d4fa2389f5e2205631
+- name: github.com/stretchr/testify
+  version: f35b8ab0b5a2cef36673838d662e249dd9c94686
+  subpackages:
+  - assert
 - name: github.com/valyala/bytebufferpool
   version: e746df99fe4a3986f4d4f79e13c1e0117ce9c2f7
 - name: github.com/valyala/fasttemplate
@@ -112,4 +119,12 @@ imports:
   version: e69e9a28bb62b977fdc58d051f1bb477b7cbe486
 - name: gopkg.in/yaml.v2
   version: 5420a8b6744d3b0345ab293f6fcba19c978f1183
-testImports: []
+testImports:
+- name: github.com/davecgh/go-spew
+  version: d8f796af33cc11cb798c1aaeb27a4ebc5099927d
+  subpackages:
+  - spew
+- name: github.com/pmezard/go-difflib
+  version: 792786c7400a136282c1664665ae0a8db921c6c2
+  subpackages:
+  - difflib

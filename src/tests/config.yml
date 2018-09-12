@@ -1,0 +1,46 @@
+hacker: false
+name: "steve"
+hobbies:
+  - skateboarding
+  - snowboarding
+  - go
+nums:
+  - 2
+  - 5
+age: 20
+server:
+  host: "locahost"
+  host_2: "local"
+  port: ":8090"
+  nestedList1:
+    - 78
+    - 90
+  nestedList2:
+    - 79
+    - 22.0
+  nestedList3:
+    - mango
+    - papaya
+    - banana
+  nestedList4:
+    - 67
+db:
+  host: "localhost"
+  name: "goorm_test"
+  password: "plivopassword"
+  user: "plivocfg"
+  port: "5432"
+  dialect: "postgres"
+  sslMode: "disable"
+
+elasticsearch:
+  host: "localhost:9200"
+  bulkUpdateLimit: 20000
+
+auth:
+  user:
+    - pswd1
+    - pswd2
+  admin:
+    - admin1
+    - admin2
